@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initialscale=1">
+<title>Weather</title>
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap.min.css"> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></scriptipt>
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"></script> -->
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="weather.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!-- <script src="./new.js"></script> -->
+<!-- <script src="./dd.js"></script> -->
+<!-- <script src="./check.js"></script> -->
+<!-- <link href="./s.css" rel="stylesheet"> -->
+</head>
+<body>
+<div style="class="jumbotron" style="margin-bottom:0px; color:white;background-color: #4aa1f3;">
+	<h2 class="text-center" style="font-size:50px; font-weight:600;">Get Current Weather</h2>
+</div>
+
+<div class="container">
+	<div class="row" style="margin-botton:20px;">
+		<h3 class="text-center text-primary">Enter City Name</h3>
+		<span id="error"></span>
+	</div>
+
+	<div class="row form-group form-inline" id="rowDiv">
+		<input type="text" name="city" id="city" class="form-control" placeholder="City Name">
+		<button id="submitWeather" class="btn bgn-primary">Search City</button>
+	</div>
+	
+	<div id="show"></div>
+	
+</div>
+</body>
+</html>
