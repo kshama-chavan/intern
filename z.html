@@ -1,0 +1,134 @@
+<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initialscale=1">
+<title>Bootstrap</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap.min.css">
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></scriptipt> -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"></script>
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./new.js"></script>
+<script src="./dd.js"></script>
+<script src="./check.js"></script>
+<link href="./s.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1 style="padding-left:35%;"> METI Company</h1>
+<p style="padding-left:35%;"> we specialize in both software n hardware</p> 
+</div>
+<div class="container">
+<img src="download.png" class="img-rounded" alt="Cinque Terre" width=100% height="300">
+</div>
+<div class="container">
+<div class="form-group">
+<form>
+<div class="col-xs-4">
+ <label class="control-label" for="fname">First name:</label><br>
+ <input  class="form-control" id="i1" type="name" name="fname"><br>
+ <label class="control-label"  for="lname">Last name:</label><br>
+ <input class="form-control"  id="i2" type="name" name="lname"><br>
+ <label class="control-label" for="phone">Telephone:</label><br>
+ <input class="form-control" id= "i3" type="text"><br>
+ <label class="control-label" for="email">Email ID:</label><br>
+ <input class="form-control"  id="i4" type="text"><br>
+ <label class="control-label" for="address">Address:</label><br>
+ <input class="form-control" id="i5" type="text"><br>
+ <label class="control-label" for="password">Password:</label><br>
+ <input class="form-control" type="password"><br>
+ <button class="btn btn-info" id="b" type="button" >Submit</button><br>
+ </div>
+</form>
+ </div>
+ </div>
+ <br>
+ <div class="container">
+	<div class="col-xs-4">
+	<button class="btn btn-primary" type="button" id="b1">Hide</button>
+	<button class="btn btn-primary" type="button" id="b2">Show</button>
+	<button class="btn btn-primary" type="button" id="b3">Toggle</button>
+	</div>
+ </div> 
+ <br>
+ <div class="container">
+ <div class="col-xs-4">
+ <p id="p">Hello world!Welcome</p>
+ <p1 id="p1">Mysore!</p1>
+ </div>
+ </div>
+<div class="container">
+<div class="col-xs-4">
+  <h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="download.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="45">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="col-xs-4">
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" min="10" max="30" required>
+<button onclick="myFunction()" type="button" class="btn btn-primary">OK</button>
+
+<p>If the number is less than 10 or greater than 30, an error message will be displayed.</p>
+<p id="demo"></p>
+</div>
+</div>
+<div class="container"></div>
+
+<p id="demo">Click the button to get your position.</p>
+
+<button onclick="getLocation()">Try It</button>
+<div id="mapholder"></div>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+//To use this code on your website, get a free API key from Google.
+//Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
+</body>
+ </html>
