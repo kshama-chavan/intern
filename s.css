@@ -1,0 +1,9 @@
+
+#div1, #div2 {
+    float: left;
+    width: 600px;
+    height: 100px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
