@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initialscale=1">
+<title>Sign Up</title>
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="./signupform.css">
+<script src="./signupform.js"></script>
+<script src="./pswdConfirm.js"></script>
+<script src="./connect.js"></script>
+</head>
+<body>
+<div class="container">
+<h2>Signup Here</h2>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="form-group">
+  <form class=" form-default myForm" action="./registerForm.php" method="post" id="pForm">
+    <div class="popUp">
+      <h1>Sign Up</h1>
+      
+      <label  class="control-label" for="email"><b>Email</b></label>
+      <input class="form-control" type="text" placeholder="Enter Email" name="email" required><br>
+
+      <label class="control-label" for="psw"><b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Enter Password" id="password" name="psw" required><br>
+
+      <label for="psw-repeat" class="control-label"><b>Repeat Password</b></label>
+      <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" id="confirmPassword" required><br>
+      
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-success cancelbtn">Cancel</button>
+        <button type="submit" onclick="document.getElementById('id01').style.display='none'" class="btn btn-success signupbtn" id="sbutton">Sign Up</button>
+      </div>
+    </div>
+	</form>
+	</div>
+  <span id="result"></span>
+</div>
+</body>
+</html>
